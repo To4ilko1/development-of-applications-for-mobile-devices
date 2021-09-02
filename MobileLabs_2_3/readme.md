@@ -8,8 +8,8 @@
 2. Изучить назначение, свойства, методы и события следующих элементов и классов (на примере UWP): Windows.Storage.StorageFile, Windows.Storage.StorageFolder, Windows.Storage.KnownFolders (специальные папки), Манифест приложения, FileIO, Windows.Storage.Pickers.FileSavePicker, System.Runtime.Serialization, SQLite и Entity Framework.
 3. Ответьте на вопросы преподавателя, при необходимости выполните дополнительные задания, которые даст преподаватель.
 ## Скриншоты реализованной программы
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №1")
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №2")
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №3")
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №4")
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №5")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_3/resources/screen1.png "Скриншот №1")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_3/resources/screen2.png "Скриншот №2")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_3/resources/screen3.png "Скриншот №3")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_3/resources/screen4.png "Скриншот №4")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_3/resources/screen5.png "Скриншот №5")
