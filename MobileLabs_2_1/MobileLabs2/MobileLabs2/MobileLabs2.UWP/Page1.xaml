@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="MobileLabs2.UWP.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MobileLabs2.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Background="#FFDAB9"/>
+        <Border Grid.Column ="1" Background="#FFDEAD"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#FA8072"/>
+        <StackPanel Padding="10 0 0 0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel Margin="0 20" Grid.Column="0" Grid.Row="0" Orientation="vertical" HorizontalAlignment="Left" Width="201">
+                <TextBox Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="40" />
+                
+                <Slider Maximum="25" TickPlacement="BottomRight" TickFrequency="5" Name="slValue" />
+                
+                <Button x:Name="ResultBtn" Content="ОК" HorizontalAlignment="Center" Click="ResultBtn_Click" />
+            </StackPanel>
+            <TextBlock FontSize="20" Margin="10 0 10 10" HorizontalAlignment="Left" Text="Изначальный массив"></TextBlock>
+            <VariableSizedWrapGrid Margin="10 0 0 0" HorizontalAlignment="Left" x:Name="startArrGrid" Orientation="Horizontal" MaximumRowsOrColumns="15">
+
+            </VariableSizedWrapGrid>
+            <StackPanel x:Name="Answer" Padding="10 0 0 0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock FontSize="30" TextWrapping="Wrap" Foreground="White" Margin="10" Text="Выполнила: Точилова Е.А., БИ-17-1"/>
+        </StackPanel>
+        <SplitView x:Name="spw" PaneBackground="White" Grid.Column="1" Grid.Row="0">
+            <SplitView.Pane>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+                    <TextBlock FontSize="18" Margin="10" TextWrapping="Wrap" Text="Вариант 20. В одномерном массиве, состоящем из n целых элементов, вычислить:"/>
+                    <TextBlock FontSize="18" Margin="10" TextWrapping="Wrap" Text="1) минимальный по модулю элемент массива;" />
+                    <TextBlock FontSize="18" Margin="10" TextWrapping="Wrap" Text="2) сумму модулей элементов массива, расположенных после первого
+элемента, равного нулю."/>
+                    <TextBlock FontSize="18" Margin="10" TextWrapping="Wrap" Text="Преобразовать массив таким образом, чтобы в первой его половине располагались
+элементы, стоявшие в четных позициях, а во второй половине – элементы, стоявшие в нечетных позициях." />
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid>
+                    <RelativePanel BorderBrush="Gray" BorderThickness="1">
+                        <Button RelativePanel.AlignRightWithPanel="True" x:Name="btn" Content="Задание" Margin="0 230 80 0" HorizontalAlignment="Center" Click="Button_Click" />
+                    </RelativePanel>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+
+    </Grid>
+</Page>

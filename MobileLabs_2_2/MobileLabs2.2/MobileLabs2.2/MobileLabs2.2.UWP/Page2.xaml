@@ -1,0 +1,134 @@
+﻿<Page
+    x:Class="MobileLabs2._2.UWP.Page2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MobileLabs2._2.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--<TextBlock x:Name="t1" FontSize="30" Text="Вторая страница"></TextBlock>-->
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <TextBlock Text="Фильтрация по оценкам" Margin="10" FontSize="16" FontWeight="Bold"></TextBlock>
+            <ComboBox x:Name="FilterByMark" Margin="10" SelectionChanged="FilterByMark_SelectionChanged">
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+                <x:String>4</x:String>
+                <x:String>5</x:String>
+            </ComboBox>
+            <AutoSuggestBox HorizontalAlignment="Left" Margin="10" x:Name="suggestBox" Header="Фильтрация по фамилии студента" PlaceholderText="Студенты" Width="242" QueryIcon="Find"
+                QuerySubmitted="suggestBox_QuerySubmitted" SuggestionChosen="suggestBox_SuggestionChosen"/>
+            <ListView Name="ListStudent4"  Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="230" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0" Margin="10 0" />
+                            <TextBlock Text="{Binding Fio}" Grid.Column="1" Margin="10 0"/>
+                            <TextBlock Text="{Binding Mark1}" Grid.Column="2" Margin="10 0"/>
+                            <TextBlock Text="{Binding Mark2}" Grid.Column="3" Margin="10 0"/>
+                            <TextBlock Text="{Binding Mark3}" Grid.Column="4" Margin="10 0"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBlock Text="Добавление новой записи" Margin="10" FontSize="16" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="Введите ФИО" Margin="10" FontSize="14"></TextBlock>
+            <TextBox x:Name="AddFioText" Margin="10 0 10 0"></TextBox>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="AddMarkText1" Margin="10 0 10 0" Header="Оценка по мат.">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                </ComboBox>
+                <ComboBox x:Name="AddMarkText2" Margin="10 0 10 0" Header="Оценка по русс.">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                </ComboBox>
+                <ComboBox x:Name="AddMarkText3" Margin="10 0 10 0" Header="Оценка по общ">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                </ComboBox>
+            </StackPanel>
+            <Button x:Name="AddStudent" Margin="10" Content="Добавить" Width="100" Click="AddStudent_Click"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock Text="Вывод списка с использованием FlipView" Margin="10" FontSize="16" FontWeight="Bold"></TextBlock>
+            <FlipView ItemsSource="{x:Bind allStudents}" Background="#FA8072" Height="290">
+
+                <FlipView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </FlipView.ItemsPanel>
+
+                <FlipView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Id}" Foreground="Black" TextAlignment="Center" Margin="10 0" />
+                            <TextBlock Text="{Binding Fio}" Foreground="Black" TextAlignment="Center" Width="230" Margin="10 0" />
+                            <TextBlock Text="{Binding Mark1}" Foreground="Black" TextAlignment="Center" Margin="10 0" />
+                            <TextBlock Text="{Binding Mark2}" Foreground="Black" TextAlignment="Center" Margin="10 0" />
+                            <TextBlock Text="{Binding Mark3}" Foreground="Black" TextAlignment="Center" Margin="10 0" />
+                        </StackPanel>
+                    </DataTemplate>
+                </FlipView.ItemTemplate>
+            </FlipView>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name ="SrZnachText" Text="Средний балл по университету" Margin="10" FontSize="16" FontWeight="Bold"></TextBlock>
+                <Button x:Name="SrZnach" Margin="10" Content="Узнать" Width="100" Click="SrZnach_Click"></Button>
+            </StackPanel>
+            <ListView Name="ListStudentBally"  Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="230" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0" Margin="10 0" />
+                            <TextBlock Text="{Binding Fio}" Grid.Column="1" Margin="10 0"/>
+                            <TextBlock Text="{Binding Mark1}" Grid.Column="2" Margin="10 0"/>
+                            <TextBlock Text="{Binding Mark2}" Grid.Column="3" Margin="10 0"/>
+                            <TextBlock Text="{Binding Mark3}" Grid.Column="4" Margin="10 0"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Page>
