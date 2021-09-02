@@ -10,7 +10,7 @@
 2. Продемонстрируйте работу всех элементов: Grid, VariableSizedWrapGrid, StackPanel, SplitView, RelativePanel 
 3. При необходимости придумайте/дополните варианты для демонстрации работы всех элементов.
 ## Скриншоты реализованной программы
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №1")
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №2")
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №3")
-![](https://github.com/To4ilko1/tattoo-parlor/blob/master/resources/Диаграмма%20компонентов.jpg "Скриншот №4")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_1/resources/screen1.png "Скриншот №1")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_1/resources/screen2.png "Скриншот №2")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_1/resources/screen3.png "Скриншот №3")
+![](https://github.com/To4ilko1/development-of-applications-for-mobile-devices/blob/master/MobileLabs_2_1/resources/screen4.png "Скриншот №4")
